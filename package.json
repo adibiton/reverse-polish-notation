@@ -1,6 +1,6 @@
 {
   "name": "rev-polish-notation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
   "devDependencies": {
     "jest-cli": "20.0.*"
   },
-	"jest": {
-		"testEnvironment": "node"
-	}
+  "jest": {
+    "testEnvironment": "node"
+  }
 }
