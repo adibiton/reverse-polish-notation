@@ -4,7 +4,7 @@ read more about the algorithm at [wiki](https://en.wikipedia.org/wiki/Reverse_Po
 
 ### Getting Started
 ```
-npm i rev-polish-notation
+npm i rev-polish-notation -S
 ```
 
 Then, call from your file:
@@ -13,6 +13,5 @@ Then, call from your file:
 const reversePolishNotation = require('rev-polish-notation');
 
 console.log(reversePolishNotation('25 20 * 10 /')  // 50
-
 ```
 
