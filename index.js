@@ -2,7 +2,7 @@
 const bigInt = require('big-integer');
 
 const opFunction = {
-  '-': (a, b) => a - b,
+  '-': (a, b) => bigInt(a - b),
   '+': (a, b) => bigInt(a + b),
   '*': (a, b) => bigInt(a * b),
   '/': (a, b) => Math.floor(a / b),
@@ -13,11 +13,9 @@ function calculate(s) {
     
     if (/[-+*/]/.test(c)) {
       c = c.trim();
-      //console.log(opFunction[c]);
-      let x = stack.pop();
-      let y = stack.pop();
-//      console.log(`op ${c}, first ${y}, second ${x}`);
-      stack.push(opFunction[c](y, x));
+      let first = stack.pop();
+      let second = stack.pop();
+      stack.push(opFunction[c](first, second));
     } else {
       stack.push(bigInt(c));
     }
