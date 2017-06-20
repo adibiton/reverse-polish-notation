@@ -5,7 +5,7 @@ const opFunction = {
   '-': (a, b) => bigInt(a - b),
   '+': (a, b) => bigInt(a + b),
   '*': (a, b) => bigInt(a * b),
-  '/': (a, b) => Math.floor(a / b),
+  '/': (a, b) => bigInt(Math.floor(a / b)),
 }
 function calculate(s) {
   let stack = [];
@@ -15,7 +15,7 @@ function calculate(s) {
       c = c.trim();
       let first = stack.pop();
       let second = stack.pop();
-      stack.push(opFunction[c](first, second));
+      stack.push(opFunction[c](second, first));
     } else {
       stack.push(bigInt(c));
     }
@@ -28,4 +28,3 @@ function breakToTokens(s) {
 }
 
 module.exports = calculate;
-//calculate(process.argv[2]);
