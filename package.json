@@ -1,5 +1,5 @@
 {
-  "name": "reverse-polish-notation",
+  "name": "rev-polish-notation",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
